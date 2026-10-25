@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "judul": "Laskar Pelangi",
+    "penerbit": "Bentang Pustaka",
+    "stok": 25
+  },
+  {
+    "id": 2,
+    "judul": "Bumi Manusia",
+    "penerbit": "Lentera Dipantara",
+    "stok": 5
+  },
+  {
+    "id": 3,
+    "judul": "Keajaiban Toko Kelontong Namiya",
+    "penerbit": "Gramedia Pustaka Utama",
+    "stok": 42
+  },
+  {
+    "id": 5,
+    "judul": "Yellowface",
+    "penerbit": "Gramedia Pustaka Utama",
+    "stok": 15
+  }
+]

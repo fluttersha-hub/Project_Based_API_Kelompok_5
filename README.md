@@ -48,7 +48,7 @@ Di dalam file `client.js` sudah ada **4 skenario** (termasuk tes integrasi Publi
 Di instruksi minta kita tes manual di Postman. Nah karena kita ada 5 endpoint, jadi harusnya kita bikin **10 test case di Postman** (1 sukses dan 1 gagal untuk masing-masing endpoint) terus hasilnya taro di tabel pas buat laporan.
 
 Rencana Status Code di Postman nanti:
-| Endpoint | Method | Skenario Berhasil (Status Code) | Skenario Gagal (Status Code) |
+| Endpoint | Method | Skenario Berhasil | Skenario Gagal |
 | :--- | :---: | :--- | :--- |
 | `/buku` | **GET** | `200 OK`  | `405 Method Not Allowed` |
 | `/buku` | **POST** | `201 Created`  | `400 Bad Request`  |

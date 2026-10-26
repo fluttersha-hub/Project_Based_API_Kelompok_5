@@ -6,7 +6,7 @@ Karena ini interaksi antar-API, kita cuma perlu buka **dua terminal** ajh;
 1. **Terminal Pertama (Server):**
    Buka terminal VSCODE dan pastikan sudah buka folder Project_Based_API_Kelompok_5 yang ini, terus ketik:
    ```bash
-   node serverbuku.js
+   node serverBuku.js
    ```
    *Kasi biar terminal ini terbuka.*
 
@@ -31,7 +31,7 @@ Ada **5 endpoint** dengan operasi CRUD lengkap:
 Kita pake **File JSON** di `data/buku.json`. Terus pake module bawaan `fs/promises`. Jadi kalo misalnya server mati, data buku yang ditambah atau dihapus masi tetap tersimpan. Kita tidak pake MongoDB ya :]
 
 **3. Posisi module `fs/promises` itu di mana dan bwat apa?**
-Di `serverbuku.js` kita pake *promise* di dua tempat:
+Di `serverBuku.js` kita pake *promise* di dua tempat:
 * Di baris atas: `const fs = require('fs/promises');`.
 * Di fungsi `bacaBody()`: Kita bikin `new Promise(...)` manual buat ambil kiriman data dari user.
 Promise ada supaya server kita tidak lag/freeze waktu lagi proses baca file atau terima data. Server di situ bisa nyambi kerja tugasnya yg lain.

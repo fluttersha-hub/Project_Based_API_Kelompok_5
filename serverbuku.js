@@ -143,14 +143,12 @@ async function detailBuku(req, res, id) {
         return kirimError(res, 404, `Buku dengan id ${id} tidak ditemukan`);
     }
 
-// Integrasi Public API (Open Library)
+// ---------- integrasi public API (Open Library) ----------
     try {
-        // Server Anda (sebagai consumer) memanggil API luar
         const urlPencarian = `https://openlibrary.org/search.json?title=${encodeURIComponent(buku.judul)}&limit=1`;
         const responsEksternal = await fetch(urlPencarian);
         const dataEksternal = await responsEksternal.json();
 
-        // Mengambil data penulis jika ditemukan
         if (dataEksternal.docs && dataEksternal.docs.length > 0) {
             buku.penulis = dataEksternal.docs[0].author_name ? dataEksternal.docs[0].author_name[0] : "Penulis tidak diketahui";
         } else {
@@ -159,8 +157,6 @@ async function detailBuku(req, res, id) {
     } catch (err) {
         buku.penulis = "Gagal mengambil data dari server eksternal";
     }
-    // -------------------------------------------
-
     kirimJSON(res, 200, buku);
 }
 

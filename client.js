@@ -1,5 +1,5 @@
 // client.js
-// Pastikan serverbuku.js sudah jalan sebelum menjalankan file ini!
+// Pastikan serverBuku.js sudah jalan sebelum menjalankan file ini!
 
 async function jalankanSkenario() {
     try {

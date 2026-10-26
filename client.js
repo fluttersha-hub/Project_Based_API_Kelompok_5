@@ -1,7 +1,7 @@
 // client.js
-// Pastikan serverBuku.js sudah jalan sebelum menjalankan file ini!
+// serverBuku.js sudah harus jalan sebelum run file ini!
 
-async function jalankanSkenario() {
+async function iniSkenario() {
     try {
         // GET
         console.log("\n[GET] Mengambil daftar semua buku:");
@@ -59,6 +59,16 @@ async function jalankanSkenario() {
         data = await respons.json();
         console.log("Status:", respons.status, "\nPesan Error:", data.error);
 
+        // Skenario Gagal PUT
+        console.log("\n[PUT] Mengubah data buku ID 9999:");
+        respons = await fetch(`http://localhost:3000/buku/9999`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ judul: "Buku Anu", penerbit: "Penerbit Abal-abalan", stok: 10 })
+        });
+        data = await respons.json();
+        console.log("Status:", respons.status, "\nPesan Error:", data.error);
+
         // Skenario Gagal GET
         console.log("\n[GET] Mencari ID 999:");
         respons = await fetch(`http://localhost:3000/buku/9999`);
@@ -68,7 +78,6 @@ async function jalankanSkenario() {
     } 
         catch (error) {
             console.log("\nGAGAL MENGHUBUNGI SERVER");
-            console.log("Pastikan sudah menyalakan server dengan perintah di terminal lain.");
         }
 }
-jalankanSkenario();
+iniSkenario();

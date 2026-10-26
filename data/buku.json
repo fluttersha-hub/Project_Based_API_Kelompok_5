@@ -3,7 +3,7 @@
     "id": 1,
     "judul": "Laskar Pelangi",
     "penerbit": "Bentang Pustaka",
-    "stok": 25
+    "stok": 17
   },
   {
     "id": 2,
@@ -18,9 +18,15 @@
     "stok": 42
   },
   {
-    "id": 5,
+    "id": 4,
     "judul": "Yellowface",
     "penerbit": "Gramedia Pustaka Utama",
-    "stok": 15
+    "stok": 26
+  },
+  {
+    "id": 5,
+    "judul": "Aroma Karsa",
+    "penerbit": "Bentang Pustaka",
+    "stok": 34
   }
 ]
